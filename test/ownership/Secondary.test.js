@@ -10,7 +10,7 @@ contract('Secondary', function ([_, primary, newPrimary, other]) {
     this.secondary = await SecondaryMock.new({ from: primary });
   });
 
-  it('stores the primary\'s address', async function () {
+  it.skip('stores the primary\'s address', async function () {
     expect(await this.secondary.primary()).to.equal(primary);
   });
 
